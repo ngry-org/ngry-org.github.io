@@ -4,7 +4,7 @@
 /*!***********************************************************************!*\
   !*** /Users/achugaev/ngry/layouts/dist/layouts/fesm5/ngry-layouts.js ***!
   \***********************************************************************/
-/*! exports provided: LayersLayoutModule, MediaLayoutModule, PanelLayoutModule, StackLayoutModule, StageLayoutModule, ViewportLayoutModule, ɵb, ɵa, ɵf, ɵd, ɵe, ɵc, ɵg, ɵi, ɵj, ɵh, ɵk, ɵl */
+/*! exports provided: LayersLayoutModule, MediaLayoutModule, PanelLayoutModule, StackLayoutModule, TilesLayoutModule, StageLayoutModule, ViewportLayoutModule, ɵb, ɵa, ɵf, ɵd, ɵe, ɵc, ɵg, ɵi, ɵj, ɵh, ɵm, ɵl, ɵk, ɵn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,6 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MediaLayoutModule", function() { return MediaLayoutModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PanelLayoutModule", function() { return PanelLayoutModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StackLayoutModule", function() { return StackLayoutModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TilesLayoutModule", function() { return TilesLayoutModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StageLayoutModule", function() { return StageLayoutModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewportLayoutModule", function() { return ViewportLayoutModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return LayerComponent; });
@@ -25,8 +26,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵi", function() { return StackBlockComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵj", function() { return StackBodyComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return StackComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵk", function() { return StageComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵl", function() { return ViewportComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵm", function() { return StageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵl", function() { return TileComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵk", function() { return TilesComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵn", function() { return ViewportComponent; });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "../../node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
 
@@ -181,82 +184,16 @@ var PanelComponent = /** @class */ (function () {
         this.x = 'center';
         this.y = 'center';
     }
-    Object.defineProperty(PanelComponent.prototype, "xLeft", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.x === 'left';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PanelComponent.prototype, "xCenter", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.x === 'center';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PanelComponent.prototype, "xRight", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.x === 'right';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PanelComponent.prototype, "yTop", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.y === 'top';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PanelComponent.prototype, "yCenter", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.y === 'center';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PanelComponent.prototype, "yBottom", {
-        get: /**
-         * @return {?}
-         */
-        function () {
-            return this.y === 'bottom';
-        },
-        enumerable: true,
-        configurable: true
-    });
     PanelComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"], args: [{
                     selector: 'l-panel',
                     template: '<ng-content></ng-content>',
-                    styles: [":host{display:flex;flex-grow:1;flex-direction:column}:host.x-left{align-items:flex-start}:host.x-center{align-items:center}:host.x-right{align-items:flex-end}:host.y-top{justify-content:flex-start}:host.y-center{justify-content:center}:host.y-bottom{justify-content:flex-end}"]
+                    styles: [":host{display:flex;flex-grow:1;flex-direction:column}:host[x=left]{align-items:flex-start}:host[x=center]{align-items:center}:host[x=right]{align-items:flex-end}:host[y=top]{justify-content:flex-start}:host[y=center]{justify-content:center}:host[y=bottom]{justify-content:flex-end}"]
                 }] }
     ];
     PanelComponent.propDecorators = {
-        x: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        y: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        xLeft: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.x-left',] }],
-        xCenter: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.x-center',] }],
-        xRight: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.x-right',] }],
-        yTop: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.y-top',] }],
-        yCenter: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.y-center',] }],
-        yBottom: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.y-bottom',] }]
+        x: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['attr.x',] }],
+        y: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['attr.y',] }]
     };
     return PanelComponent;
 }());
@@ -316,7 +253,7 @@ var StackComponent = /** @class */ (function () {
                 }] }
     ];
     StackComponent.propDecorators = {
-        direction: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
+        direction: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['attr.direction',] }],
         isRow: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.row',] }],
         isColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['class.column',] }]
     };
@@ -374,6 +311,59 @@ var StackLayoutModule = /** @class */ (function () {
                 },] }
     ];
     return StackLayoutModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var TilesComponent = /** @class */ (function () {
+    function TilesComponent() {
+    }
+    TilesComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"], args: [{
+                    selector: 'l-tiles',
+                    template: '<ng-content></ng-content>',
+                    styles: [":host{display:flex;flex-direction:row;flex-wrap:wrap}"]
+                }] }
+    ];
+    return TilesComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var TileComponent = /** @class */ (function () {
+    function TileComponent() {
+    }
+    TileComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"], args: [{
+                    selector: 'l-tile',
+                    template: '<ng-content></ng-content>',
+                    styles: [":host{display:inline-flex;flex-grow:0;flex-direction:column}"]
+                }] }
+    ];
+    return TileComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var TilesLayoutModule = /** @class */ (function () {
+    function TilesLayoutModule() {
+    }
+    TilesLayoutModule.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
+                    declarations: [TilesComponent, TileComponent],
+                    exports: [TilesComponent, TileComponent],
+                    imports: [
+                        _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]
+                    ]
+                },] }
+    ];
+    return TilesLayoutModule;
 }());
 
 /**
@@ -471,6 +461,129 @@ var ViewportLayoutModule = /** @class */ (function () {
 
 
 //# sourceMappingURL=ngry-layouts.js.map
+
+/***/ }),
+
+/***/ "../layouts/src/lib/tiles/tile/tile.component.css":
+/*!********************************************************!*\
+  !*** ../layouts/src/lib/tiles/tile/tile.component.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: inline-flex;\n  flex-grow: 0;\n  flex-direction: column;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2plY3RzL2xheW91dHMvc3JjL2xpYi90aWxlcy90aWxlL3RpbGUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtFQUNyQixhQUFhO0VBQ2IsdUJBQXVCO0NBQ3hCIiwiZmlsZSI6InByb2plY3RzL2xheW91dHMvc3JjL2xpYi90aWxlcy90aWxlL3RpbGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogaW5saW5lLWZsZXg7XG4gIGZsZXgtZ3JvdzogMDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "../layouts/src/lib/tiles/tile/tile.component.ts":
+/*!*******************************************************!*\
+  !*** ../layouts/src/lib/tiles/tile/tile.component.ts ***!
+  \*******************************************************/
+/*! exports provided: TileComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TileComponent", function() { return TileComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
+
+
+var TileComponent = /** @class */ (function () {
+    function TileComponent() {
+    }
+    TileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'l-tile',
+            template: '<ng-content></ng-content>',
+            styles: [__webpack_require__(/*! ./tile.component.css */ "../layouts/src/lib/tiles/tile/tile.component.css")]
+        })
+    ], TileComponent);
+    return TileComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../layouts/src/lib/tiles/tiles-layout.module.ts":
+/*!*******************************************************!*\
+  !*** ../layouts/src/lib/tiles/tiles-layout.module.ts ***!
+  \*******************************************************/
+/*! exports provided: TilesLayoutModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TilesLayoutModule", function() { return TilesLayoutModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../../node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _tiles_tiles_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tiles/tiles.component */ "../layouts/src/lib/tiles/tiles/tiles.component.ts");
+/* harmony import */ var _tile_tile_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tile/tile.component */ "../layouts/src/lib/tiles/tile/tile.component.ts");
+
+
+
+
+
+var TilesLayoutModule = /** @class */ (function () {
+    function TilesLayoutModule() {
+    }
+    TilesLayoutModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_tiles_tiles_component__WEBPACK_IMPORTED_MODULE_3__["TilesComponent"], _tile_tile_component__WEBPACK_IMPORTED_MODULE_4__["TileComponent"]],
+            exports: [_tiles_tiles_component__WEBPACK_IMPORTED_MODULE_3__["TilesComponent"], _tile_tile_component__WEBPACK_IMPORTED_MODULE_4__["TileComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+            ]
+        })
+    ], TilesLayoutModule);
+    return TilesLayoutModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../layouts/src/lib/tiles/tiles/tiles.component.css":
+/*!**********************************************************!*\
+  !*** ../layouts/src/lib/tiles/tiles/tiles.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2plY3RzL2xheW91dHMvc3JjL2xpYi90aWxlcy90aWxlcy90aWxlcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtFQUNwQixnQkFBZ0I7Q0FDakIiLCJmaWxlIjoicHJvamVjdHMvbGF5b3V0cy9zcmMvbGliL3RpbGVzL3RpbGVzL3RpbGVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "../layouts/src/lib/tiles/tiles/tiles.component.ts":
+/*!*********************************************************!*\
+  !*** ../layouts/src/lib/tiles/tiles/tiles.component.ts ***!
+  \*********************************************************/
+/*! exports provided: TilesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TilesComponent", function() { return TilesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
+
+
+var TilesComponent = /** @class */ (function () {
+    function TilesComponent() {
+    }
+    TilesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'l-tiles',
+            template: '<ng-content></ng-content>',
+            styles: [__webpack_require__(/*! ./tiles.component.css */ "../layouts/src/lib/tiles/tiles/tiles.component.css")]
+        })
+    ], TilesComponent);
+    return TilesComponent;
+}());
+
+
 
 /***/ }),
 
@@ -583,6 +696,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _zones_about_zone_about_zone_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./zones/about-zone/about-zone.component */ "./src/app/zones/about-zone/about-zone.component.ts");
 /* harmony import */ var _services_services_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/services.module */ "./src/app/services/services.module.ts");
 /* harmony import */ var _services_route_title_route_title_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/route-title/route-title.service */ "./src/app/services/route-title/route-title.service.ts");
+/* harmony import */ var _mocks_tiles_mock_tiles_mock_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./mocks/tiles-mock/tiles-mock.component */ "./src/app/mocks/tiles-mock/tiles-mock.component.ts");
+/* harmony import */ var _layouts_src_lib_tiles_tiles_layout_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../layouts/src/lib/tiles/tiles-layout.module */ "../layouts/src/lib/tiles/tiles-layout.module.ts");
+
+
 
 
 
@@ -618,7 +735,8 @@ var AppModule = /** @class */ (function () {
                 _mocks_stage_mock_stage_mock_component__WEBPACK_IMPORTED_MODULE_13__["StageMockComponent"],
                 _mocks_stack_mock_stack_mock_component__WEBPACK_IMPORTED_MODULE_14__["StackMockComponent"],
                 _mocks_layers_mock_layers_mock_component__WEBPACK_IMPORTED_MODULE_15__["LayersMockComponent"],
-                _zones_about_zone_about_zone_component__WEBPACK_IMPORTED_MODULE_16__["AboutZoneComponent"]
+                _zones_about_zone_about_zone_component__WEBPACK_IMPORTED_MODULE_16__["AboutZoneComponent"],
+                _mocks_tiles_mock_tiles_mock_component__WEBPACK_IMPORTED_MODULE_19__["TilesMockComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -628,6 +746,7 @@ var AppModule = /** @class */ (function () {
                 _ngry_layouts__WEBPACK_IMPORTED_MODULE_5__["PanelLayoutModule"],
                 _ngry_layouts__WEBPACK_IMPORTED_MODULE_5__["StackLayoutModule"],
                 _ngry_layouts__WEBPACK_IMPORTED_MODULE_5__["StageLayoutModule"],
+                _layouts_src_lib_tiles_tiles_layout_module__WEBPACK_IMPORTED_MODULE_20__["TilesLayoutModule"],
                 _ngry_layouts__WEBPACK_IMPORTED_MODULE_5__["ViewportLayoutModule"],
                 _services_services_module__WEBPACK_IMPORTED_MODULE_17__["ServicesModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([
@@ -678,6 +797,13 @@ var AppModule = /** @class */ (function () {
                                 component: _mocks_stage_mock_stage_mock_component__WEBPACK_IMPORTED_MODULE_13__["StageMockComponent"],
                                 data: {
                                     title: 'Stage layout'
+                                }
+                            },
+                            {
+                                path: 'tiles',
+                                component: _mocks_tiles_mock_tiles_mock_component__WEBPACK_IMPORTED_MODULE_19__["TilesMockComponent"],
+                                data: {
+                                    title: 'Tiles layout'
                                 }
                             },
                             {
@@ -1072,6 +1198,59 @@ var StageMockComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/mocks/tiles-mock/tiles-mock.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/mocks/tiles-mock/tiles-mock.component.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: flex;\n  flex-grow: 1;\n  min-height: 100%;\n}\n\nl-tile app-block {\n  display: flex;\n  flex-grow: 1;\n  flex-direction: column;\n}\n\nl-tile > app-block > app-block {\n  width: 300px;\n  background: #eee;\n  border-radius: 3px;\n}\n\nl-tile app-block img {\n  width: 100%;\n  height: auto;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2plY3RzL2V4YW1wbGUvc3JjL2FwcC9tb2Nrcy90aWxlcy1tb2NrL3RpbGVzLW1vY2suY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWM7RUFDZCxhQUFhO0VBQ2IsaUJBQWlCO0NBQ2xCOztBQUVEO0VBQ0UsY0FBYztFQUNkLGFBQWE7RUFDYix1QkFBdUI7Q0FDeEI7O0FBR0Q7RUFDRSxhQUFhO0VBQ2IsaUJBQWlCO0VBQ2pCLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLFlBQVk7RUFDWixhQUFhO0NBQ2QiLCJmaWxlIjoicHJvamVjdHMvZXhhbXBsZS9zcmMvYXBwL21vY2tzL3RpbGVzLW1vY2svdGlsZXMtbW9jay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWdyb3c6IDE7XG4gIG1pbi1oZWlnaHQ6IDEwMCU7XG59XG5cbmwtdGlsZSBhcHAtYmxvY2sge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWdyb3c6IDE7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cblxubC10aWxlID4gYXBwLWJsb2NrID4gYXBwLWJsb2NrIHtcbiAgd2lkdGg6IDMwMHB4O1xuICBiYWNrZ3JvdW5kOiAjZWVlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG5cbmwtdGlsZSBhcHAtYmxvY2sgaW1nIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogYXV0bztcbn1cblxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/mocks/tiles-mock/tiles-mock.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/mocks/tiles-mock/tiles-mock.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<l-stack>\n  <l-stack-block>\n    <h1>\n      <app-block>\n        <app-block>\n          Tiles layout\n        </app-block>\n      </app-block>\n    </h1>\n    <hr>\n  </l-stack-block>\n  <l-stack-body>\n    <l-viewport>\n      <app-block>\n        <l-tiles>\n          <l-tile>\n            <app-block>\n              <app-block>\n                <l-stack>\n                  <l-stack-body>\n                    <app-block>\n                      <img src=\"assets/images/ny.jpg\" alt=\"NY\"/>\n                    </app-block>\n                  </l-stack-body>\n                  <l-stack-block>\n                    <app-block>\n                      <button>action</button>\n                    </app-block>\n                  </l-stack-block>\n                </l-stack>\n              </app-block>\n            </app-block>\n          </l-tile>\n\n          <l-tile>\n            <app-block>\n              <app-block>\n                <l-stack>\n                  <l-stack-body>\n                    <app-block>\n                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolorem ex harum illum ipsa ipsum\n                      laudantium omnis quod ullam voluptatibus. Cum ex impedit inventore iure molestiae odio suscipit.\n                      Aliquid\n                      asperiores autem, corporis dicta, dolores dolorum enim iusto labore laboriosam magni molestiae\n                      necessitatibus numquam officiis pariatur provident ratione reiciendis rem sapiente similique sint\n                      tempore\n                      tenetur ullam vero. Aperiam aspernatur atque beatae cum laborum modi natus officiis, quae,\n                      quibusdam\n                      ratione similique tenetur unde voluptate? A asperiores aspernatur at autem cum dolor impedit modi,\n                      nihil\n                      perferendis praesentium repudiandae soluta, unde, vero! Blanditiis doloremque expedita quas?\n                      Aliquid\n                      facere necessitatibus nihil nobis quam quasi rerum.\n                    </app-block>\n                  </l-stack-body>\n                  <l-stack-block>\n                    <app-block>\n                      <button>action</button>\n                    </app-block>\n                  </l-stack-block>\n                </l-stack>\n              </app-block>\n            </app-block>\n          </l-tile>\n\n          <l-tile>\n            <app-block>\n              <app-block>\n                <l-stack>\n                  <l-stack-body>\n                    <app-block>\n                      <ul>\n                        <li>Lorem ipsum dolor sit amet.</li>\n                        <li>Aspernatur fugiat iure necessitatibus voluptate.</li>\n                        <li>Alias impedit itaque quaerat repudiandae!</li>\n                        <li>Assumenda nemo quo recusandae voluptatibus!</li>\n                        <li>Aut culpa eaque expedita pariatur.</li>\n                      </ul>\n                    </app-block>\n                  </l-stack-body>\n                  <l-stack-block>\n                    <app-block>\n                      <button>action</button>\n                    </app-block>\n                  </l-stack-block>\n                </l-stack>\n              </app-block>\n            </app-block>\n          </l-tile>\n\n          <l-tile>\n            <app-block>\n              <app-block>\n                <l-stack>\n                  <l-stack-body>\n                    <app-block>\n                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolorem ex harum illum ipsa ipsum\n                      laudantium omnis quod ullam voluptatibus. Cum ex impedit inventore iure molestiae odio suscipit.\n                      Aliquid\n                      asperiores autem, corporis dicta, dolores dolorum enim iusto labore laboriosam magni molestiae\n                      necessitatibus numquam officiis pariatur provident ratione reiciendis rem sapiente similique sint\n                      tempore\n                      tenetur ullam vero. Aperiam aspernatur atque beatae cum laborum modi natus officiis, quae,\n                      quibusdam\n                      ratione similique tenetur unde voluptate? A asperiores aspernatur at autem cum dolor impedit modi,\n                      nihil\n                      perferendis praesentium repudiandae soluta, unde, vero! Blanditiis doloremque expedita quas?\n                      Aliquid\n                      facere necessitatibus nihil nobis quam quasi rerum.\n                    </app-block>\n                  </l-stack-body>\n                  <l-stack-block>\n                    <app-block>\n                      <button>action</button>\n                    </app-block>\n                  </l-stack-block>\n                </l-stack>\n              </app-block>\n            </app-block>\n          </l-tile>\n\n          <l-tile>\n            <app-block>\n              <app-block>\n                <l-stack>\n                  <l-stack-body>\n                    <app-block>\n                      <img src=\"assets/images/ny.jpg\" alt=\"NY\"/>\n                    </app-block>\n                  </l-stack-body>\n                  <l-stack-block>\n                    <app-block>\n                      <button>action</button>\n                    </app-block>\n                  </l-stack-block>\n                </l-stack>\n              </app-block>\n            </app-block>\n          </l-tile>\n\n        </l-tiles>\n      </app-block>\n    </l-viewport>\n  </l-stack-body>\n</l-stack>\n"
+
+/***/ }),
+
+/***/ "./src/app/mocks/tiles-mock/tiles-mock.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/mocks/tiles-mock/tiles-mock.component.ts ***!
+  \**********************************************************/
+/*! exports provided: TilesMockComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TilesMockComponent", function() { return TilesMockComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
+
+
+var TilesMockComponent = /** @class */ (function () {
+    function TilesMockComponent() {
+    }
+    TilesMockComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-tiles-mock',
+            template: __webpack_require__(/*! ./tiles-mock.component.html */ "./src/app/mocks/tiles-mock/tiles-mock.component.html"),
+            styles: [__webpack_require__(/*! ./tiles-mock.component.css */ "./src/app/mocks/tiles-mock/tiles-mock.component.css")]
+        })
+    ], TilesMockComponent);
+    return TilesMockComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/mocks/viewport-mock/viewport-mock.component.css":
 /*!*****************************************************************!*\
   !*** ./src/app/mocks/viewport-mock/viewport-mock.component.css ***!
@@ -1302,7 +1481,7 @@ module.exports = ":host {\n  display: flex;\n  flex-grow: 1;\n}\n\n/*# sourceMap
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<l-stack direction=\"row\">\n  <l-stack-block>\n    <aside>\n      <l-viewport>\n        <nav>\n          <a routerLink=\"layers\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Layers\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"media\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Media\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"panel\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Panel\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"stack\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Stack\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"stage\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Stage\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"viewport\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Viewport\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n        </nav>\n      </l-viewport>\n    </aside>\n  </l-stack-block>\n  <l-stack-body>\n    <l-viewport>\n      <router-outlet></router-outlet>\n    </l-viewport>\n  </l-stack-body>\n</l-stack>\n"
+module.exports = "<l-stack direction=\"row\">\n  <l-stack-block>\n    <aside>\n      <l-viewport>\n        <nav>\n          <a routerLink=\"layers\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Layers\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"media\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Media\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"panel\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Panel\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"stack\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Stack\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"stage\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Stage\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"tiles\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Tiles\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n          <a routerLink=\"viewport\" routerLinkActive=\"active\" class=\"clickable\">\n            <app-block>\n              <l-media>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-puzzle-piece\"></i>\n                  </app-block>\n                </l-media-action>\n                <l-media-details>\n                  <app-block>\n                    Viewport\n                  </app-block>\n                </l-media-details>\n                <l-media-action>\n                  <app-block>\n                    <i class=\"fa fa-angle-right\"></i>\n                  </app-block>\n                </l-media-action>\n              </l-media>\n            </app-block>\n          </a>\n        </nav>\n      </l-viewport>\n    </aside>\n  </l-stack-block>\n  <l-stack-body>\n    <l-viewport>\n      <router-outlet></router-outlet>\n    </l-viewport>\n  </l-stack-body>\n</l-stack>\n"
 
 /***/ }),
 
